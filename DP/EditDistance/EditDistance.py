@@ -1,6 +1,9 @@
-# Operations allowed : Insertion, Addition, Deletion
+"""
+Minumum nomber of corrections for correcting str1 into str2
+Operations allowed : Insertion, Addition, Deletion
+"""
 
-def func(str1, str2, m, n):
+def edit_distance(str1, str2, m, n):
     dp = [[0 for x in range(n+1)] for x in range(m+1)]
     for i in range(m+1):
         for j in range(n+1):
@@ -14,9 +17,3 @@ def func(str1, str2, m, n):
                 dp[i][j] = 1 + min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1])
 
     return dp[m][n]
-
-if __name__ == '__main__':
-    str1 = "hacktoberfest"
-    str2 = "hackerearth"
-
-    print(func(str1, str2, len(str1), len(str2)))

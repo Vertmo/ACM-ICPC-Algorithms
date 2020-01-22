@@ -1,9 +1,11 @@
+"""
+Find the longest common subsequence of X and Y
+"""
+
 def lcs(X, Y):
-    # find the length of the strings
     m = len(X)
     n = len(Y)
 
-    # declaring the array for storing the dp values
     L = [[None] * (n + 1) for i in range(m + 1)]
     """Following steps build L[m+1][n+1] in bottom up fashion
     Note: L[i][j] contains length of LCS of X[0..i-1]
@@ -17,5 +19,4 @@ def lcs(X, Y):
             else:
                 L[i][j] = max(L[i - 1][j], L[i][j - 1])
 
-    # L[m][n] contains the length of LCS of X[0..n-1] & Y[0..m-1]
     return L[m][n]

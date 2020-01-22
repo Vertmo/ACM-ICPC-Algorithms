@@ -1,5 +1,8 @@
-import collections
+"""
+Breadth-First search algorithm in a graph represented as an adjacency dict
+"""
 
+import collections
 
 def bfs(graph, root): 
     visited, queue = set(), collections.deque([root])
@@ -12,9 +15,3 @@ def bfs(graph, root):
             if neighbour not in visited: 
                 visited.add(neighbour) 
                 queue.append(neighbour) 
-
-
-if __name__ == '__main__':
-    # sample input format below
-    graph = {0: [1, 2], 1: [2], 2: []} 
-    bfs(graph, 0)

@@ -1,0 +1,119 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[left=0.4in,right=0.4in,top=0.7in,bottom=0.4in]{geometry}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tocloft}
+\usepackage{babel}[french]
+\usepackage{pdflscape}
+\usepackage{multicol}
+
+\hypersetup{pdfborder = {0 0 0}}
+
+\renewcommand*{\ttdefault}{pcr}
+\renewcommand\cftsecfont{\fontsize{8}{9}\bfseries}
+\renewcommand\cftsecpagefont{\fontsize{8}{9}\mdseries}
+\renewcommand\cftsubsecfont{\fontsize{5}{6}\mdseries}
+\renewcommand\cftsubsecpagefont{\fontsize{5}{6}\mdseries}
+\renewcommand\cftsecafterpnum{\vspace{-1ex}}
+\renewcommand\cftsubsecafterpnum{\vspace{-1ex}}
+
+\lstdefinestyle{shared}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    xleftmargin=\parindent,
+    showstringspaces=false,
+    basicstyle=\fontsize{7.5}{8}\ttfamily,
+}
+\lstdefinestyle{py}{
+    style=shared,
+    language=Python,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{purple!40!black},
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+}
+
+\lstset{style=py}
+
+\pagestyle{fancy}
+\fancyhead[L]{Sorbonne Université}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+
+\fancypagestyle{plain}
+{
+\fancyhead[L]{Sorbonne Université}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+}
+
+\title{\vspace{-4ex}\Large{Notebook de l'équipe \textbf{ijk-apla} (Sorbonne Université)}}
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{landscape}
+\begin{multicols}{2}
+
+\maketitle
+\tableofcontents
+
+\section{Greedy Algorithms}
+
+\subsection{Activity Selection}
+
+\lstinputlisting{../Greedy/ActivitySelection/Activity_Selection.py}
+
+\subsection{Fractional Knapsack}
+
+\lstinputlisting{../Greedy/Knapsack/Fractional_Knapsack.py}
+
+\section{Dynamic Programming}
+
+\subsection{Edit Distance}
+
+\lstinputlisting{../DP/EditDistance/EditDistance.py}
+
+\subsection{Longest Common Subsequence}
+
+\lstinputlisting{../DP/LongestCommonSubsequence/LCS.py}
+
+\section{Graph Algorithms}
+
+\subsection{Breadth First Search}
+
+\lstinputlisting{../BFS/python/breadth_first_search.py}
+
+\subsection{Depth First Search}
+
+\lstinputlisting{../DFS/python/DFS.py}
+
+\subsection{Dijstra}
+
+\lstinputlisting{../Graph/DijkstrasSPT/python/Dijkastra_algo.py}
+
+\subsection{Floyd-Warshall}
+
+\lstinputlisting{../DP/Floyd Warshall Algorithm/floyd_warshall.py}
+
+\section{Maths}
+
+\subsection{Lowest Common Multiple}
+
+\lstinputlisting{../Math/lowest_common_multiple/lcm.py}
+
+\subsection{Sieve of Eratosthenes}
+
+\lstinputlisting{../Math/sieve_of_eratosthenes/eratosthenes.py}
+
+\section{Optimizations}
+
+\section{Geometry}
+
+\end{multicols}
+\end{landscape}
+
+\end{document}

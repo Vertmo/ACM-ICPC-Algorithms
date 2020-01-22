@@ -1,16 +1,8 @@
-'''
-Activity Selection Problem
+"""
+Selection of the maximum number of activities
+Each activity is a dict { start; end }
+"""
 
-Input :
-6
-1 3 0 5 8 5
-2 4 6 7 9 9
-
-Output :
-4
-'''
-
-#Activity Class
 class Activity:
 
     #Store the start and end times of the activity
@@ -40,14 +32,3 @@ def Activity_Selection(actList):
 
     #Return the length of the selected activities array
     return len(selectedActivities)
-
-n = int(input())
-activityList = []
-
-startTimes = list(map(int,input().strip().split()))
-endTimes = list(map(int,input().strip().split()))
-
-for i in range(n):
-    activityList.append(Activity(startTimes[i],endTimes[i]))
-
-print(Activity_Selection(activityList))
