@@ -34,6 +34,22 @@
     identifierstyle=\color{blue},
     stringstyle=\color{orange},
 }
+\lstdefinestyle{ocaml}{
+	style=shared,
+    language=[Objective]caml,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{red!80!black},
+    identifierstyle=\color{blue},
+    stringstyle=\color{purple!40!black},
+}
+\lstdefinestyle{cpp}{
+	style=shared,
+    language=C++,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{red!80!black},
+    identifierstyle=\color{blue},
+    stringstyle=\color{purple!40!black},
+}
 
 \lstset{style=py}
 
@@ -91,6 +107,10 @@
 
 \lstinputlisting{../DFS/python/DFS.py}
 
+\subsection{Bellman Ford}
+
+\lstinputlisting{../Graph/BellmanFordSSSP/BellmanFord.py}
+
 \subsection{Dijstra}
 
 \lstinputlisting{../Graph/DijkstrasSPT/python/Dijkastra_algo.py}
@@ -109,9 +129,58 @@
 
 \lstinputlisting{../Math/sieve_of_eratosthenes/eratosthenes.py}
 
-\section{Optimizations}
-
 \section{Geometry}
+
+\subsection{Convex Hull}
+
+\lstinputlisting{../Geometry 2D/ConvexHull/ConvexHull.py}
+
+\section{Input-Outputs}
+
+\subsection{Python IO}
+
+\lstset{style=py}
+
+\begin{lstlisting}
+import sys
+
+lines = sys.stdin.readlines()
+lines = [l[0:-1].split(" ") for l in lines]
+n = int(lines[0])
+\end{lstlisting}
+
+\subsection{OCaml IO}
+
+\lstset{style=ocaml}
+
+\begin{lstlisting}
+let read_in filename = 
+let lines = ref [] in
+try
+  while true; do
+    lines := (String.split_on_char " " (input_line stdin)) :: !lines
+  done; !lines
+with End_of_file ->
+  List.rev !lines
+\end{lstlisting}
+
+\subsection{C++ IO}
+
+\begin{lstlisting}
+int main() {
+    std::string tmp;
+    while(std::getline(std::cin, tmp)) {
+        std::vector<int> nums;
+        std::stringstream ss(tmp);
+        int ti;
+        while(ss >> ti) 
+            nums.push_back(ti);
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\lstset{style=cpp}
 
 \end{multicols}
 \end{landscape}
