@@ -1,7 +1,12 @@
+"""
+Trie structure, used to store and search for strings
+"""
+
 class Trienode:
 	def __init__(self):
 		self.ch=[None]*26
 		self.endofword=None
+
 class Tries:
 	def __init__(self):
 		self.head=None
@@ -40,7 +45,3 @@ class Tries:
 				print("FOUND")
 			else:
 				print("Not Found")
-t=Tries()
-t.add("apple")
-t.add("ball")
-t.search("apple")

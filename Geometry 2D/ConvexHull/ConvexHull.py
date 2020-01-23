@@ -1,5 +1,6 @@
 """
-Calculates the convex hull of a set of point using the Gift-Wrapping Algorithm
+Calculates the convex hull of a set of point,
+using the Gift-Wrapping Algorithm
 """
 
 from collections import namedtuple
@@ -35,6 +36,7 @@ class ConvexHull(object):
             if p.x < min_x:
                 min_x = p.x
                 start = p
+
 
         point = start
         self._hull_points.append(start)

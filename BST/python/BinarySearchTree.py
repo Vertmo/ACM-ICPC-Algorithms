@@ -1,12 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sun Oct 22 14:27:07 2017
-
-@author: Daniel
+Binary Search Tree (probably better to do it in OCaml :p)
 """
 
-
-# Binary Search Tree for an array of a single type
 class BST:
     def __init__(self, dataType):
         self._root = None
@@ -137,11 +132,3 @@ class Node:
 
     def setRight(self, newRight):
         self._right = newRight
-
-
-if __name__ == "__main__":
-    bst = BST(int)
-    bst.loadArray((11, 20, 18, 4, 5, 7, 2, 0))
-    bst.populateTree()
-    print(bst.search(18))
-    print(bst.getSorted())
