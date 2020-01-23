@@ -12,19 +12,19 @@
 \hypersetup{pdfborder = {0 0 0}}
 
 \renewcommand*{\ttdefault}{pcr}
-\renewcommand\cftsecfont{\fontsize{8}{9}\bfseries}
-\renewcommand\cftsecpagefont{\fontsize{8}{9}\mdseries}
-\renewcommand\cftsubsecfont{\fontsize{5}{6}\mdseries}
-\renewcommand\cftsubsecpagefont{\fontsize{5}{6}\mdseries}
-\renewcommand\cftsecafterpnum{\vspace{-1ex}}
-\renewcommand\cftsubsecafterpnum{\vspace{-1ex}}
+%% \renewcommand\cftsecfont{\fontsize{8}{9}\bfseries}
+%% \renewcommand\cftsecpagefont{\fontsize{8}{9}\mdseries}
+%% \renewcommand\cftsubsecfont{\fontsize{5}{6}\mdseries}
+%% \renewcommand\cftsubsecpagefont{\fontsize{5}{6}\mdseries}
+%% \renewcommand\cftsecafterpnum{\vspace{-1ex}}
+%% \renewcommand\cftsubsecafterpnum{\vspace{-1ex}}
 
 \lstdefinestyle{shared}{
     belowcaptionskip=1\baselineskip,
     breaklines=true,
     xleftmargin=\parindent,
     showstringspaces=false,
-    basicstyle=\fontsize{7.5}{8}\ttfamily,
+    basicstyle=\footnotesize\ttfamily,
 }
 \lstdefinestyle{py}{
     style=shared,
@@ -97,6 +97,16 @@
 
 \lstinputlisting{../DP/LongestCommonSubsequence/LCS.py}
 
+\section{Backtracking}
+
+\subsection{Rat in a Maze}
+
+\lstinputlisting{../BackTracking/RatInAMaze/ratmaze.py}
+
+\subsection{Sudoku}
+
+\lstinputlisting{../BackTracking/SudokuAlgorithm/sudoku.py}
+
 \section{Sorting Algorithms}
 
 \subsection{Merge Sort}
@@ -150,6 +160,16 @@
 \subsection{Sieve of Eratosthenes}
 
 \lstinputlisting{../Math/sieve_of_eratosthenes/eratosthenes.py}
+
+\section{Optimizations}
+
+\subsection{Simplex}
+
+\lstinputlisting{../Optimizations/Simplex/simplex.py}
+
+\subsection{Ford-Fulkerson}
+
+\lstinputlisting{../NetworkFlow/FordFulkerson/FordFulkerson.py}
 
 \section{Geometry}
 
