@@ -1,3 +1,7 @@
+"""
+Quick Sort algorithm. Mean time : O(n*log(n)), Worst time O(n^2)
+"""
+
 class QuickSort:
     def __init__(self, lst):
         self.lst = lst
@@ -25,9 +29,3 @@ class QuickSort:
 
     def show(self):
         return self.lst
-
-
-if __name__ == "__main__":
-    i = QuickSort([0, 5, 5, 4, 6, 3, 5, 8, 2, 1])
-    i.sort()
-    print(i.show())

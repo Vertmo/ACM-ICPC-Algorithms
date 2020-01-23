@@ -1,3 +1,7 @@
+"""
+Merge Sort algorithm. Worst time : O(n*loc(n))
+"""
+
 class MergeSort:
     def __init__(self, lst):
         self.lst = lst
@@ -36,9 +40,3 @@ class MergeSort:
 
     def show(self):
         return self.lst
-
-
-if __name__ == "__main__":
-    i = MergeSort([5, 4, 3, 2, 1])
-    i.sort()
-    print(i.show())
